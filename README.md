@@ -47,13 +47,13 @@ Before you can use this pprof server, make sure you have the following installed
 To start the pprof server, run the following command:
 
 ```shell
-./go-pprof
+./go-pprof serve-http
 ```
 
 By default, the pprof server will run on port 3333. You can specify a different port using the `-port` flag:
 
 ```shell
-./pprof-server -port 9090
+./go-pprof serve-http -port 9090
 ```
 
 Once the server is running, you can access the pprof web UI in your web browser by navigating to `http://localhost:3333` (or the port you specified). You will see a list of available profiling endpoints.
