@@ -51,6 +51,11 @@ To start the pprof server, run the following command:
 ./go-pprof serve-http
 ```
 By default, the pprof server will run on port 3333. You can specify a different port using the `-port` flag:
+```shell
+./go-pprof serve-http -port 9090
+```
+
+Once the server is running, you can access the pprof web UI in your web browser by navigating to `http://localhost:3333` (or the port you specified). You will see a list of available profiling endpoints.
 
 ### Basic Command
 using cmd -> go tool pprof http://localhost:3333/debug/pprof/profile
@@ -61,12 +66,6 @@ using cmd -> go tool pprof http://localhost:3333/debug/pprof/profile
 - listweb [func name] = show code program on the web
 using web ui -> go tool pprof -http=:8080 http://localhost:3333/debug/pprof/profile
 using file -> go tool pprof -http=:8080 pprof.main.exe.samples.cpu.024.pb.gz
-```shell
-./go-pprof serve-http -port 9090
-```
-
-Once the server is running, you can access the pprof web UI in your web browser by navigating to `http://localhost:3333` (or the port you specified). You will see a list of available profiling endpoints.
-
 ## Profiling Endpoints
 
 The pprof server exposes various profiling endpoints for your Go application. Here are some common endpoints you can access:
