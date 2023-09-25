@@ -49,6 +49,15 @@ To start the pprof server, run the following command:
 ```shell
 ./go-pprof serve-http
 ```
+### Basic Command
+using cmd -> go tool pprof http://localhost:3333/debug/pprof/profile
+- top 10 = show 10 proccess dec
+- top 10 -source = show func name
+- web = open svg graph
+- list [func name] = show code program
+- listweb [func name] = show code program on the web
+using web ui -> go tool pprof -http=:8080 http://localhost:3333/debug/pprof/profile
+using file -> go tool pprof -http=:8080 pprof.main.exe.samples.cpu.024.pb.gz
 
 By default, the pprof server will run on port 3333. You can specify a different port using the `-port` flag:
 
